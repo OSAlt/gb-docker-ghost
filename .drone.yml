@@ -6,7 +6,7 @@ steps:
     image: plugins/docker
     settings:
       repo: geekbeacon/gb-ghost
-      tags: 3.41.5
+      auto_tag: true
       username:
         from_secret: DOCKER_USER
       password:
