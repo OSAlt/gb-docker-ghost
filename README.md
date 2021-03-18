@@ -9,9 +9,10 @@ The official docker image is a bit too limited and needed something that added a
 Additional Plugins:
 
   - GSS support  https://github.com/danmasta/ghost-gcs-adapter version 0.0.3
-  - S3 support -- coming soon
+  - S3 support -- https://github.com/spanishdict/ghost-s3-compat version v2.1.0
 
 
+## Google Storage Bucket
 Additional configuration added for GCS is:
 
 ```sh
@@ -30,6 +31,14 @@ GOOGLE_APPLICATION_CREDENTIALS=/var/lib/ghost/keys/service.json
 You'll need to add a service account with write support to the requested bucket.  The bucket also needs to be public in order to serve traffic.
 
 By convention all the GCE keys are stored in the keys folder and then mounted as a volume to /var/lib/ghost/keys/
+
+## S3 Bucket
+storage__active=ghost-s3
+storage__ghost_s3__acessKeyId=
+storage__ghost_s3__secretAccessKey=
+storage__ghost_s3__bucket=
+storage__ghost_s3__region=
+storage__ghost_s3__assetHost=
 
 ## DEVELOPMENT
 

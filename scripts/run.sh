@@ -11,6 +11,15 @@ function setupGCS()
 
 }
 
+function setupS3() 
+{
+    mkdir -p /tmp/ghost-s3-compat ${GHOST_CONTENT}/adapters/storage/ghost-s3-compat && \
+    wget -O - "$(npm view ghost-s3-compat@v2.1.0 dist.tarball)" | tar xz -C /tmp/ghost-s3-compat && \
+    npm install --prefix /tmp/ghost-s3-compat/package --silent --only=production --no-optional --no-progress && \
+    mv /tmp/ghost-s3-compat/package/* ${GHOST_CONTENT}/adapters/storage/ghost-s3-compat
+}
+
+
 function waitForService() 
 {
     status=1
@@ -25,5 +34,6 @@ function waitForService()
 
 
 setupGCS
+setupS3
 
 /usr/local/bin/docker-entrypoint.sh node current/index.js 

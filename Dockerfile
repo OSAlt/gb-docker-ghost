@@ -5,7 +5,6 @@ RUN \
     apt update && \
     apt -y install wget && \
     chmod a+x  /var/lib/ghost/run.sh && \
-    mkdir -p /tmp/gcs ${GHOST_CONTENT}/adapters/storage/gcs && \
     mkdir /var/lib/ghost/keys && \
     #   Clean Up Image
     apt clean && \
