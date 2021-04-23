@@ -1,4 +1,4 @@
-FROM ghost:4.2.1
+FROM ghost:4.3.2
 
 COPY scripts/run.sh /var/lib/ghost/run.sh
 RUN \
@@ -7,6 +7,7 @@ RUN \
     chmod a+x  /var/lib/ghost/run.sh && \
     mkdir -p /tmp/gcs ${GHOST_CONTENT}/adapters/storage/gcs && \
     mkdir /var/lib/ghost/keys && \
+#    npm install -g npm@7.11.0 && \
     #   Clean Up Image
     apt clean && \
     rm -rf /var/lib/apt/lists/*
