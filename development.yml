@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   ghost:
-    image: geekbeacon/gb-ghost:latest
+    image: geekbeacon/gb-ghost:4.6.4
     build:
       context: .
     volumes:

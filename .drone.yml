@@ -6,8 +6,33 @@ steps:
     image: plugins/docker
     settings:
       repo: geekbeacon/gb-ghost
-      tags: 4.4.0
+      tags: ${DRONE_TAG}
       username:
         from_secret: DOCKER_USER
       password:
         from_secret: DOCKER_PASS
+
+trigger:
+  event:
+    - tag
+---
+kind: pipeline
+name: validation
+
+steps:
+  - name: docker
+    image: plugins/docker
+    settings:
+      repo: geekbeacon/gb-ghost
+      tags: ${DRONE_TAG}
+      dry_run: true
+      username:
+        from_secret: DOCKER_USER
+      password:
+        from_secret: DOCKER_PASS
+
+
+trigger:
+  event:
+    - push
+    - pull_request
