@@ -1,4 +1,5 @@
-[![Build Status](https://cloud.drone.io/api/badges/OSAlt/gb-docker-ghost/status.svg)](https://cloud.drone.io/OSAlt/gb-docker-ghost)
+[![Build Status](https://github.com/OSALT/gb-docker-ghost/actions/workflows/build-docker.yml/badge.svg?)](https://github.com/OSALT/gb-docker-ghost/actions/workflows/build-docker.yml)
+[![Build Status](https://github.com/OSALT/gb-docker-ghost/actions/workflows/publish-docker.yml/badge.svg?)](https://github.com/OSALT/gb-docker-ghost/actions/workflows/publish-docker.yml)
 
 # Ghost GeekBeacon image
 
