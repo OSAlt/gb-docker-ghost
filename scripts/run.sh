@@ -6,7 +6,7 @@ cloud=${storage__active}
 
 function setupGCS() {
     mkdir -p /tmp/gcs ${GHOST_CONTENT}/adapters/storage/gcs &&
-        wget -O - "$(npm view @danmasta/ghost-gcs-adapter@0.0.4 dist.tarball)" | tar xz -C /tmp/gcs &&
+        wget -O - "$(npm view @danmasta/ghost-gcs-adapter@0.0.6 dist.tarball)" | tar xz -C /tmp/gcs &&
         npm install --prefix /tmp/gcs/package --silent --only=production --no-optional --no-progress &&
         cp -r /tmp/gcs/package/* ${GHOST_CONTENT}/adapters/storage/gcs
 
