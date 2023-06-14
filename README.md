@@ -9,7 +9,7 @@ The official docker image is a bit too limited and needed something that added a
 
 Additional Plugins:
 
-  - GSS support  https://github.com/danmasta/ghost-gcs-adapter version 0.0.6
+  - GSS support  https://github.com/danmasta/ghost-gcs-adapter version 1.0.1
   - S3 support -- https://github.com/colinmeinke/ghost-storage-adapter-s3 v2.8.0
 
 ## GCS configuration
