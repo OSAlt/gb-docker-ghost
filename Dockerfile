@@ -1,4 +1,4 @@
-FROM ghost:5.112.0
+FROM ghost:5.113.0
 
 COPY scripts/run.sh /var/lib/ghost/run.sh
 RUN \
